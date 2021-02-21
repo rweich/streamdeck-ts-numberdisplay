@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v1.0.0...v1.0.1) (2021-02-21)
+
+
+### Bug Fixes
+
+* ran update-template ([bcf45a1](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/bcf45a1a4c96c0e0a010c554ae5dece3d1972181))
+
 # 1.0.0 (2021-02-21)
 
 
