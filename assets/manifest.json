@@ -1,7 +1,7 @@
 {
   "Actions": [
     {
-      "Icon": "images/action1Icon",
+      "Icon": "images/action1.icon",
       "Name": "Numberdisplay Example (TS)",
       "States": [
         {
