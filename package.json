@@ -52,7 +52,7 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rweich/streamdeck-ts-template.git"
+    "url": "git+https://github.com/rweich/streamdeck-ts-numberdisplay.git"
   },
   "lint-staged": {
     "{src,test}/**/*.ts": [
