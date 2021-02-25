@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v1.0.1...v1.1.0) (2021-02-25)
+
+
+### Features
+
+* add ability to change background ([20d2c0b](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/20d2c0bfaf9805cbe7fd709b1a3e087f9b8e798f))
+
 ## [1.0.1](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v1.0.0...v1.0.1) (2021-02-21)
 
 
