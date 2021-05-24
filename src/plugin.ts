@@ -1,12 +1,4 @@
-import {
-  GetSettingsEvent,
-  IncomingEvents,
-  IncomingPluginEvents,
-  SetImageEvent,
-  SetSettingsEvent,
-  SetTitleEvent,
-  Streamdeck,
-} from '@rweich/streamdeck-ts';
+import { Streamdeck } from '@rweich/streamdeck-ts';
 import { isSettings } from './Settings';
 
 const plugin = new Streamdeck().plugin();
@@ -30,7 +22,7 @@ function changeNumber(number: number, context: string): void {
 }
 
 function showNumber(number: number, context: string): void {
-  plugin.sendEvent(new SetTitleEvent(String(number), context));
+  plugin.setTitle(String(number), context);
 }
 
 function changeBackground(background: string, context: string): void {
@@ -47,29 +39,27 @@ function changeBackground(background: string, context: string): void {
 
     const ctx = canvas.getContext('2d');
     ctx?.drawImage(image, 0, 0);
-    plugin.sendEvent(new SetImageEvent(canvas.toDataURL('image/png'), context));
+    plugin.setImage(canvas.toDataURL('image/png'), context);
   };
   image.src = backgroundMap[background];
   backgrounds[context] = background;
 }
 
 function updateSettings(context: string): void {
-  plugin.sendEvent(
-    new SetSettingsEvent(context, { number: numbers[context] || 0, background: backgrounds[context] || 'orange' }),
-  );
+  plugin.setSettings(context, { number: numbers[context] || 0, background: backgrounds[context] || 'orange' });
 }
 
-plugin.on(IncomingPluginEvents.WillAppear, (event) => {
-  plugin.sendEvent(new GetSettingsEvent(event.context));
+plugin.on('willAppear', (event) => {
+  plugin.getSettings(event.context);
   changeNumber(getNumber(event.context), event.context);
 });
-plugin.on(IncomingEvents.DidReceiveSettings, (event) => {
+plugin.on('didReceiveSettings', (event) => {
   if (isSettings(event.settings)) {
     changeNumber(event.settings.number, event.context);
     changeBackground(event.settings.background, event.context);
   }
 });
-plugin.on(IncomingPluginEvents.KeyDown, (event) => {
+plugin.on('keyDown', (event) => {
   changeNumber(getNumber(event.context) + 1, event.context);
   updateSettings(event.context);
 });
