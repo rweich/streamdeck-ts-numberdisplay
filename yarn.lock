@@ -1187,13 +1187,20 @@
   dependencies:
     "@octokit/openapi-types" "^5.1.0"
 
-"@rweich/streamdeck-ts@^1.0.1":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@rweich/streamdeck-ts/-/streamdeck-ts-1.1.0.tgz#b392547324c5cb086be3f4e025c6bb03158993a8"
-  integrity sha512-/g6GEiVdRdqrtHc7bWDTRdza/oaocQZ7JxaOlN5jXunsFdEtOPgBQQIFdOFukKLJws81zLIBdP6RLgITgBzfhA==
+"@rweich/streamdeck-events@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@rweich/streamdeck-events/-/streamdeck-events-1.2.0.tgz#4935af3f88a97b5cb490e4e0f89e629ef21b36b8"
+  integrity sha512-3CNdsTxBcD8HmZUn6JIrOoFE8yDaoY+QKU2zbmhuRnLfqhcn1cerU0o1FNgoHjcq+Z4YxSsL0t/uKTMO4AKDlQ==
   dependencies:
-    "@sinclair/typebox" "^0.12.7"
-    ajv "^6.12.4"
+    "@sinclair/typebox" "^0.16.7"
+    ajv "^8.5.0"
+
+"@rweich/streamdeck-ts@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@rweich/streamdeck-ts/-/streamdeck-ts-2.0.0.tgz#506cc8c2ef7540bc7ec8d7e5fdfaa8185b17e74d"
+  integrity sha512-Zp6zVdm+j5A8Qn1O4nMhawWOSIfB5wBBHCmSYFl12eMu+09+zz1kOH288nOPrqyiKAGmQHO+caEaIkCk/dSc3A==
+  dependencies:
+    "@rweich/streamdeck-events" "^1.2.0"
     eventemitter3 "^4.0.7"
     isomorphic-ws "^4.0.1"
     ts-log "^2.2.3"
@@ -1310,10 +1317,10 @@
     lodash "^4.17.4"
     read-pkg-up "^7.0.0"
 
-"@sinclair/typebox@^0.12.7":
-  version "0.12.9"
-  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.12.9.tgz#4444c9bb2f98fcee693cbcb69256bd3dde8b4543"
-  integrity sha512-JQzO2wlZ2wJdCft30wRMmxPcTEz4cDS4Hi2izVoFgGzTo5/eJKxCpklc2WTa7K24s7f3L5DKvhlC6RKcf2WNhA==
+"@sinclair/typebox@^0.16.7":
+  version "0.16.7"
+  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.16.7.tgz#3187369b2ff237f57477ef155be4c992e592fa7c"
+  integrity sha512-d12AkLZJXD30hXBhJSgf33RqGO0NMHIDzsQPYfp6WGoaSuMnSGIUanII2OUbeZFnD/j3Nbl2zifgO2+5tPClCQ==
 
 "@tootallnate/once@1":
   version "1.1.2"
@@ -1756,6 +1763,16 @@ ajv@^7.0.2:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-7.1.1.tgz#1e6b37a454021fa9941713f38b952fc1c8d32a84"
   integrity sha512-ga/aqDYnUy/o7vbsRTFhhTsNeXiYb5JWDIcRIeZfwRNCefwjNTVYCGdGSUrEmiu3yDK3vFvNbgJxvrQW4JXrYQ==
+  dependencies:
+    fast-deep-equal "^3.1.1"
+    json-schema-traverse "^1.0.0"
+    require-from-string "^2.0.2"
+    uri-js "^4.2.2"
+
+ajv@^8.5.0:
+  version "8.5.0"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-8.5.0.tgz#695528274bcb5afc865446aa275484049a18ae4b"
+  integrity sha512-Y2l399Tt1AguU3BPRP9Fn4eN+Or+StUGWCUpbnFyXSo8NZ9S4uj+AG2pjs5apK+ZMOwYOz1+a+VKvKH7CudXgQ==
   dependencies:
     fast-deep-equal "^3.1.1"
     json-schema-traverse "^1.0.0"
@@ -8129,9 +8146,9 @@ write-file-atomic@^2.0.0, write-file-atomic@^2.3.0, write-file-atomic@^2.4.3:
     signal-exit "^3.0.2"
 
 ws@^7.4.3:
-  version "7.4.3"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-7.4.3.tgz#1f9643de34a543b8edb124bdcbc457ae55a6e5cd"
-  integrity sha512-hr6vCR76GsossIRsr8OLR9acVVm1jyfEWvhbNjtgPOrfvAlKzvyeg/P6r8RuDjRyrcQoPQT7K0DGEPc7Ae6jzA==
+  version "7.4.5"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-7.4.5.tgz#a484dd851e9beb6fdb420027e3885e8ce48986c1"
+  integrity sha512-xzyu3hFvomRfXKH8vOFMU3OguG6oOvhXMo3xsGy3xWExqaM2dxBbVxuD99O7m3ZUFMvvscsZDqxfgMaRr/Nr1g==
 
 xdg-basedir@^3.0.0:
   version "3.0.0"

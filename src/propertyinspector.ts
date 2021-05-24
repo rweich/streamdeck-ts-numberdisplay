@@ -1,4 +1,4 @@
-import { GetSettingsEvent, IncomingEvents, SetSettingsEvent, Streamdeck } from '@rweich/streamdeck-ts';
+import { Streamdeck } from '@rweich/streamdeck-ts';
 import { is } from 'ts-type-guards';
 import { isSettings } from './Settings';
 
@@ -25,20 +25,18 @@ function getSelectValue(id: string): string | null {
 }
 
 function onChange(): void {
-  if (pi.context === null) {
+  if (pi.pluginUUID === undefined) {
     return;
   }
-  pi.sendEvent(
-    new SetSettingsEvent(pi.context, {
-      number: getSelectValue('change_number') || 0,
-      background: getSelectValue('change_background') || 'original',
-    }),
-  );
+  pi.setSettings(pi.pluginUUID, {
+    number: getSelectValue('change_number') || 0,
+    background: getSelectValue('change_background') || 'original',
+  });
 }
 
-pi.on(IncomingEvents.OnWebsocketOpen, (event) => {
+pi.on('websocketOpen', (event) => {
   // were there any settings saved?
-  pi.sendEvent(new GetSettingsEvent(event.uuid));
+  pi.getSettings(event.uuid);
 
   // register event listeners
   Array.from(document.querySelectorAll('.sdpi-item-value')).forEach((element) => {
@@ -48,7 +46,7 @@ pi.on(IncomingEvents.OnWebsocketOpen, (event) => {
   });
 });
 
-pi.on(IncomingEvents.DidReceiveSettings, (event) => {
+pi.on('didReceiveSettings', (event) => {
   if (isSettings(event.settings)) {
     setSelectValue('change_number', String(event.settings.number || 0));
     setSelectValue('change_background', event.settings.background || 'original');
