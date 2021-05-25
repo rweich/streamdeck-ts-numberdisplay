@@ -5,10 +5,10 @@ const plugin = new Streamdeck().plugin();
 const numbers: Record<string, number> = {};
 const backgrounds: Record<string, string> = {};
 const backgroundMap: Record<string, string> = {
+  blue: 'images/action1.key.blue.png',
+  green: 'images/action1.key.green.png',
   orange: 'images/action1.key.orange.png',
   red: 'images/action1.key.red.png',
-  green: 'images/action1.key.green.png',
-  blue: 'images/action1.key.blue.png',
 };
 
 function getNumber(context: string): number {
@@ -31,22 +31,21 @@ function changeBackground(background: string, context: string): void {
   }
 
   const image = new Image();
-  image.onload = () => {
+  image.addEventListener('load', () => {
     const canvas = document.createElement('canvas');
 
     canvas.width = image.naturalWidth;
     canvas.height = image.naturalHeight;
 
-    const ctx = canvas.getContext('2d');
-    ctx?.drawImage(image, 0, 0);
+    canvas.getContext('2d')?.drawImage(image, 0, 0);
     plugin.setImage(canvas.toDataURL('image/png'), context);
-  };
+  });
   image.src = backgroundMap[background];
   backgrounds[context] = background;
 }
 
 function updateSettings(context: string): void {
-  plugin.setSettings(context, { number: numbers[context] || 0, background: backgrounds[context] || 'orange' });
+  plugin.setSettings(context, { background: backgrounds[context] || 'orange', number: numbers[context] || 0 });
 }
 
 plugin.on('willAppear', (event) => {
