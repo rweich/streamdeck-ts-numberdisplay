@@ -1,3 +1,17 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See
+[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+### [1.1.1](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v1.1.0...v1.1.1) (2021-05-25)
+
+
+### Miscellaneous Chores
+
+* update dependencies ([7ae64a1](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/7ae64a1631eb5236065240d0edc926c679a1fbba))
+* upgrade to streamdeck-template v2 ([8a3e823](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/8a3e8233ae8b122e523c5867237902386fdde73b))
+* upgrade to streamdeck-ts 2 ([2ba0223](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/2ba022391ac5649f5972eac2e517d000dad3ac8a))
+
 # [1.1.0](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v1.0.1...v1.1.0) (2021-02-25)
 
 
