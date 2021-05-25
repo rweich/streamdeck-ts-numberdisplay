@@ -4,12 +4,12 @@ import { isSettings } from './Settings';
 
 const pi = new Streamdeck().propertyinspector();
 
-function getSelect(id: string): HTMLSelectElement | null {
-  const element = document.getElementById(id);
+function getSelect(id: string): HTMLSelectElement | undefined {
+  const element = document.querySelector(`#${id}`);
   if (is(HTMLSelectElement)(element)) {
     return element;
   }
-  return null;
+  return;
 }
 
 function setSelectValue(id: string, value: string): void {
@@ -19,9 +19,8 @@ function setSelectValue(id: string, value: string): void {
   }
 }
 
-function getSelectValue(id: string): string | null {
-  const select = getSelect(id);
-  return select ? select.value : null;
+function getSelectValue(id: string): string | undefined {
+  return getSelect(id)?.value;
 }
 
 function onChange(): void {
@@ -29,8 +28,8 @@ function onChange(): void {
     return;
   }
   pi.setSettings(pi.pluginUUID, {
-    number: getSelectValue('change_number') || 0,
     background: getSelectValue('change_background') || 'original',
+    number: getSelectValue('change_number') || 0,
   });
 }
 
@@ -39,11 +38,11 @@ pi.on('websocketOpen', (event) => {
   pi.getSettings(event.uuid);
 
   // register event listeners
-  Array.from(document.querySelectorAll('.sdpi-item-value')).forEach((element) => {
+  for (const element of Array.from(document.querySelectorAll('.sdpi-item-value'))) {
     if (is(HTMLSelectElement)(element)) {
       element.addEventListener('change', onChange);
     }
-  });
+  }
 });
 
 pi.on('didReceiveSettings', (event) => {
