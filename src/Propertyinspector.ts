@@ -1,54 +1,42 @@
+import { Settings, isSettings } from './Settings';
+
+import { FormBuilder } from '@rweich/streamdeck-formbuilder';
 import { Streamdeck } from '@rweich/streamdeck-ts';
-import { is } from 'ts-type-guards';
-import { isSettings } from './Settings';
 
 const pi = new Streamdeck().propertyinspector();
+let builder: FormBuilder<Settings> | undefined;
 
-function getSelect(id: string): HTMLSelectElement | undefined {
-  const element = document.querySelector(`#${id}`);
-  if (is(HTMLSelectElement)(element)) {
-    return element;
-  }
-  return;
-}
+pi.on('websocketOpen', ({ uuid }) => pi.getSettings(uuid)); // trigger the didReceiveSettings event
 
-function setSelectValue(id: string, value: string): void {
-  const select = getSelect(id);
-  if (select) {
-    select.value = value;
-  }
-}
-
-function getSelectValue(id: string): string | undefined {
-  return getSelect(id)?.value;
-}
-
-function onChange(): void {
-  if (pi.pluginUUID === undefined) {
-    return;
-  }
-  pi.setSettings(pi.pluginUUID, {
-    background: getSelectValue('change_background') || 'original',
-    number: getSelectValue('change_number') || 0,
-  });
-}
-
-pi.on('websocketOpen', (event) => {
-  // were there any settings saved?
-  pi.getSettings(event.uuid);
-
-  // register event listeners
-  for (const element of Array.from(document.querySelectorAll('.sdpi-item-value'))) {
-    if (is(HTMLSelectElement)(element)) {
-      element.addEventListener('change', onChange);
+pi.on('didReceiveSettings', ({ settings }) => {
+  if (builder === undefined) {
+    const initialData: Settings = isSettings(settings) ? settings : { background: 'orange', number: '0' };
+    builder = new FormBuilder<Settings>(initialData);
+    const numbers = builder.createDropdown().setLabel('Change Value');
+    for (const [index] of Array.from({ length: 10 }).entries()) {
+      numbers.addOption(String(index), String(index));
     }
-  }
-});
-
-pi.on('didReceiveSettings', (event) => {
-  if (isSettings(event.settings)) {
-    setSelectValue('change_number', String(event.settings.number || 0));
-    setSelectValue('change_background', event.settings.background || 'original');
+    builder.addElement('number', numbers);
+    builder.addElement(
+      'background',
+      builder
+        .createDropdown()
+        .setLabel('Background')
+        .addOption('Orange Background', 'orange')
+        .addOption('Red Background', 'red')
+        .addOption('Green Background', 'green')
+        .addOption('Blue Background', 'blue'),
+    );
+    builder.appendTo(document.querySelector('.sdpi-wrapper') ?? document.body);
+    builder.on('change-settings', () => {
+      if (pi.pluginUUID === undefined) {
+        console.error('pi has no uuid! is it registered already?', pi.pluginUUID);
+        return;
+      }
+      pi.setSettings(pi.pluginUUID, builder?.getFormData());
+    });
+  } else if (isSettings(settings)) {
+    builder.setFormData(settings);
   }
 });
 
