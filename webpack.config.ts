@@ -53,6 +53,10 @@ const config = (environment: unknown, options: { mode: string; env: unknown }): 
             loader: 'babel-loader',
           },
         },
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader'],
+        },
       ],
     },
     resolve: {

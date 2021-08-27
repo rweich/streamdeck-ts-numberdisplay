@@ -45,7 +45,7 @@ function changeBackground(background: string, context: string): void {
 }
 
 function updateSettings(context: string): void {
-  plugin.setSettings(context, { background: backgrounds[context] || 'orange', number: numbers[context] || 0 });
+  plugin.setSettings(context, { background: backgrounds[context] || 'orange', number: String(numbers[context] || 0) });
 }
 
 plugin.on('willAppear', (event) => {
@@ -54,7 +54,7 @@ plugin.on('willAppear', (event) => {
 });
 plugin.on('didReceiveSettings', (event) => {
   if (isSettings(event.settings)) {
-    changeNumber(event.settings.number, event.context);
+    changeNumber(Number(event.settings.number), event.context);
     changeBackground(event.settings.background, event.context);
   }
 });
