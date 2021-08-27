@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [1.1.4](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v1.1.3...v1.1.4) (2021-08-27)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump jszip from 3.6.0 to 3.7.1 ([dfb214a](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/dfb214a0513dd832e179568dc69474ff81750942))
+* replace pi-form-code with formbuilder ([d61a416](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/d61a4160298d0058a7692482e6694beb4b04b53d))
+* update webpack build config ([e0213a7](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/e0213a71ac303101d5fd3388ead7869cf97ce54e))
+
 ### [1.1.3](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v1.1.2...v1.1.3) (2021-08-05)
 
 
