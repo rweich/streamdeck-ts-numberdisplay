@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [1.1.6](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v1.1.5...v1.1.6) (2022-01-23)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump nanoid from 3.1.25 to 3.2.0 ([c481e4f](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/c481e4fdcc78b5b9287e9961866ec25263ea0d24))
+* **deps:** bump node-fetch from 2.6.1 to 2.6.7 ([905f107](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/905f1078887e159fb9098aa4941bc10803692882))
+* **deps:** bump semver-regex from 3.1.2 to 3.1.3 ([c6ad181](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/c6ad1818130993e4ea5597e132a3bec4c6b9152f))
+* **deps:** bump trim-off-newlines from 1.0.1 to 1.0.3 ([eb71252](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/eb712520598bd34b1f6efee608bbae53d82a4111))
+
 ### [1.1.5](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v1.1.4...v1.1.5) (2021-09-04)
 
 
