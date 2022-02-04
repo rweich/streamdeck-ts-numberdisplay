@@ -1,7 +1,7 @@
-import { Settings, isSettings } from './Settings';
-
 import { FormBuilder } from '@rweich/streamdeck-formbuilder';
 import { Streamdeck } from '@rweich/streamdeck-ts';
+
+import { isSettings, Settings } from './Settings';
 
 const pi = new Streamdeck().propertyinspector();
 let builder: FormBuilder<Settings> | undefined;
