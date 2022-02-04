@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.0](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v1.1.6...v2.0.0) (2022-02-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* the minimum required version of node is now v14.17
+
+### Miscellaneous Chores
+
+* autofix linting errors ([028aa95](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/028aa9553fa4b938cb35e254d8f9b78884fd42db))
+* drop support for node v12 and v15 ([c95dc44](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/c95dc44a7030ad3d16fa13568893268fe1570bc4))
+* update dependencies (major) ([50901c5](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/50901c570d43b0dd45c8903c6edf4526f893cd36))
+
 ### [1.1.6](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v1.1.5...v1.1.6) (2022-01-23)
 
 
