@@ -16,6 +16,11 @@
     "type-check": "tsc --noEmit",
     "update-template": "update-template https://github.com/rweich/streamdeck-ts-template"
   },
+  "dependencies": {
+    "@rweich/streamdeck-formbuilder": "^1.0.0",
+    "@rweich/streamdeck-ts": "^2.0.0",
+    "ts-type-guards": "^0.7.0"
+  },
   "devDependencies": {
     "@amille/semantic-release-plugins": "^3.3.10",
     "@babel/cli": "^7.14.3",
@@ -48,10 +53,8 @@
     "webpack": "^5.37.1",
     "webpack-cli": "^4.7.0"
   },
-  "dependencies": {
-    "@rweich/streamdeck-formbuilder": "^1.0.0",
-    "@rweich/streamdeck-ts": "^2.0.0",
-    "ts-type-guards": "^0.7.0"
+  "engines": {
+    "node": ">=14.17"
   },
   "repository": "rweich/streamdeck-ts-numberdisplay",
   "bugs": "https://github.com/rweich/streamdeck-ts-numberdisplay/issues",
