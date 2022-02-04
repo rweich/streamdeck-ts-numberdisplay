@@ -1,4 +1,5 @@
 import { Streamdeck } from '@rweich/streamdeck-ts';
+
 import { isSettings } from './Settings';
 
 const plugin = new Streamdeck().plugin();
