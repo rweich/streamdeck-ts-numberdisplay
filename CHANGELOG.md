@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.0.2](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v2.0.1...v2.0.2) (2022-06-04)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump npm from 8.4.1 to 8.12.0 ([95c56db](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/95c56db9be632c1bb69592c6de5c5af170c23f19))
+* **deps:** bump semver-regex from 3.1.3 to 3.1.4 ([f9236aa](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/f9236aa172d72a7f0102794bf630149792ce542d))
+
 ### [2.0.1](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v2.0.0...v2.0.1) (2022-04-02)
 
 
