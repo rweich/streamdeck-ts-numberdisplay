@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.0.3](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v2.0.2...v2.0.3) (2022-06-10)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump semantic-release from 19.0.2 to 19.0.3 ([a79b6e7](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/a79b6e7917251ec34d2adafd6cc8e9bee94d9625))
+
 ### [2.0.2](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v2.0.1...v2.0.2) (2022-06-04)
 
 
