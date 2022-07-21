@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.0.4](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v2.0.3...v2.0.4) (2022-07-21)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump terser from 5.10.0 to 5.14.2 ([91b8dda](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/91b8dda932e2a79fb34bf8129949e4ce86f32979))
+
 ### [2.0.3](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v2.0.2...v2.0.3) (2022-06-10)
 
 
