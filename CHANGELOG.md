@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.5](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v2.0.4...v2.0.5) (2022-10-22)
+
+
+### Bug Fixes
+
+* set executable flag to githooks ([2c69c40](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/2c69c4065fc0e005d8c42916513abdf6615778c7))
+
+
+### Miscellaneous Chores
+
+* update dependencies ([6c0d5b1](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/6c0d5b163b9ed553aa3fe2b7e1f9d32fe0bbc430))
+
 ### [2.0.4](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v2.0.3...v2.0.4) (2022-07-21)
 
 
