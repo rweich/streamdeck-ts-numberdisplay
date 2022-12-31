@@ -1,10 +1,10 @@
-import * as path from 'path';
+import * as path from 'node:path';
+
+import copyWebpackPlugin from 'copy-webpack-plugin';
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import * as webpack from 'webpack';
 
 import { createDevelopmentManifest, manifestNs } from './build/scripts/manifest';
-
-import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
-import copyWebpackPlugin from 'copy-webpack-plugin';
 
 const config = (environment: unknown, options: { mode: string; env: unknown }): webpack.Configuration => {
   let pluginNs = manifestNs;
@@ -65,6 +65,10 @@ const config = (environment: unknown, options: { mode: string; env: unknown }): 
               },
             },
           ],
+        },
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader'],
         },
       ],
     },
