@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.0](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v2.0.6...v2.1.0) (2022-12-31)
+
+
+### Features
+
+* add support for streamdeck+ ([f535dc6](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/f535dc687cd1dde477264f92fe7c88677d204430))
+
 ## [2.0.6](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v2.0.5...v2.0.6) (2022-12-31)
 
 
