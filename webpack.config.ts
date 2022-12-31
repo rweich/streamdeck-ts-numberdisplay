@@ -3,6 +3,7 @@ import * as webpack from 'webpack';
 
 import { createDevelopmentManifest, manifestNs } from './build/scripts/manifest';
 
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import copyWebpackPlugin from 'copy-webpack-plugin';
 
 const config = (environment: unknown, options: { mode: string; env: unknown }): webpack.Configuration => {
@@ -12,7 +13,6 @@ const config = (environment: unknown, options: { mode: string; env: unknown }): 
     pluginNs = 'dev.' + manifestNs;
   }
 
-  /* eslint-disable sort-keys */
   return {
     entry: {
       plugin: './build/entries/PluginEntry.ts',
@@ -43,6 +43,7 @@ const config = (environment: unknown, options: { mode: string; env: unknown }): 
           },
         ],
       }),
+      new ForkTsCheckerWebpackPlugin(),
     ],
     module: {
       rules: [
@@ -54,8 +55,16 @@ const config = (environment: unknown, options: { mode: string; env: unknown }): 
           },
         },
         {
-          test: /\.css$/i,
-          use: ['style-loader', 'css-loader'],
+          test: /\.js$/,
+          enforce: 'pre',
+          use: [
+            {
+              loader: 'source-map-loader',
+              options: {
+                filterSourceMappingUrl: () => false,
+              },
+            },
+          ],
         },
       ],
     },
@@ -66,7 +75,6 @@ const config = (environment: unknown, options: { mode: string; env: unknown }): 
       splitChunks: {},
     },
   };
-  /* eslint-enable sort-keys */
 };
 
 export default config;
