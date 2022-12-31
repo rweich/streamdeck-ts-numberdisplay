@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.6](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v2.0.5...v2.0.6) (2022-12-31)
+
+
+### Miscellaneous Chores
+
+* remove spdi.css as that's now part of the formbuilder package ([7b96384](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/7b9638470fe677a37baa955604a3afef294b9426))
+* update dependencies (major) ([ee490fe](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/ee490fe1bcce01e41b5323b4580adb3d5c2bd9da))
+* update template files from upstream ([3780ed2](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/3780ed2813f0217a071f40c90a5084181af37ddc))
+
 ## [2.0.5](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v2.0.4...v2.0.5) (2022-10-22)
 
 
