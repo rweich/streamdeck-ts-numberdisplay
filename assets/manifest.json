@@ -10,6 +10,16 @@
           "FontSize": "15"
         }
       ],
+      "Controllers": ["Keypad", "Encoder"],
+      "Encoder": {
+        "layout": "$B1",
+        "Icon": "images/action1.key.orange",
+        "TriggerDescription": {
+          "Rotate": "Increase/Decrease the counter",
+          "Push": "Changes the step value",
+          "Touch": "Reset the counter"
+        }
+      },
       "SupportedInMultiActions": false,
       "Tooltip": "",
       "UUID": "de.rweich.numberdisplay.action"
