@@ -14,7 +14,8 @@
     "prepare": "husky install",
     "set-plugin-version": "ts-node build/scripts/set-plugin-version.ts",
     "type-check": "tsc --noEmit",
-    "update-template": "update-template https://github.com/rweich/streamdeck-ts-template"
+    "update-template": "update-template https://github.com/rweich/streamdeck-ts-template",
+    "watch": "webpack watch --mode=development"
   },
   "dependencies": {
     "@rweich/streamdeck-formbuilder": "^2.0.0",
@@ -41,11 +42,13 @@
     "conventional-changelog-conventionalcommits": "^5.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.2.0",
+    "fork-ts-checker-webpack-plugin": "^7.2.14",
     "husky": "^8.0.1",
     "jsonfile": "^6.1.0",
     "lint-staged": "^13.0.3",
     "rimraf": "^3.0.2",
     "semantic-release": "^19.0.3",
+    "source-map-loader": "^4.0.1",
     "style-loader": "^3.2.1",
     "ts-node": "^10.0.0",
     "typescript": "^4.2.4",
