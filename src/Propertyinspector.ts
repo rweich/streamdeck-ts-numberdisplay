@@ -10,13 +10,17 @@ pi.on('websocketOpen', ({ uuid }) => pi.getSettings(uuid)); // trigger the didRe
 
 pi.on('didReceiveSettings', ({ settings }) => {
   if (builder === undefined) {
-    const initialData: Settings = isSettings(settings) ? settings : { background: 'orange', number: '0' };
+    const initialData: Settings = isSettings(settings) ? settings : { background: 'orange', number: '0', step: '1' };
     builder = new FormBuilder<Settings>(initialData);
     const numbers = builder.createDropdown().setLabel('Change Value');
     for (const [index] of Array.from({ length: 10 }).entries()) {
       numbers.addOption(String(index), String(index));
     }
     builder.addElement('number', numbers);
+    builder.addElement(
+      'step',
+      builder.createDropdown().setLabel('Step').addOption('1', '1').addOption('2', '2').addOption('3', '3'),
+    );
     builder.addElement(
       'background',
       builder

@@ -4,8 +4,10 @@
 
 A streamdeck plugin that displays a number that can be incremented on button-press.
 
+![Screenshot](https://github.com/rweich/streamdeck-ts-numberdisplay/raw/main/assets/images/screenshot.png)
+
 This is an example how to create a streamdeck plugin using the [streamdeck-ts-template](https://github.com/rweich/streamdeck-ts-template) inspired by the [NumberDisplay](https://github.com/elgatosf/streamdeck-numberdisplay) plugin from elgato.
 
 ## Installation
 - download the [current](https://github.com/rweich/streamdeck-ts-numberdisplay/releases/latest/download/rweich.numberdisplay.streamDeckPlugin) release
-- double click the file to trigger the Stream Deck software to install the plugin
+- double-click the file to trigger the Stream Deck software to install the plugin
