@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v2.1.0...v2.1.1) (2023-02-05)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump http-cache-semantics from 4.1.0 to 4.1.1 ([2a2f5b0](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/2a2f5b0bf6cd10d196b81b868896d0a6dce3d0cf))
+
 ## [2.1.0](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v2.0.6...v2.1.0) (2022-12-31)
 
 
