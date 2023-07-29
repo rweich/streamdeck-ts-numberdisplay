@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.2](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v2.1.1...v2.1.2) (2023-07-29)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump webpack from 5.75.0 to 5.76.0 ([7e00e16](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/7e00e16407a7b7d7295f717ef3986f2d7fd7f29e))
+* **deps:** bump semver from 5.7.1 to 5.7.2 ([62f1bd8](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/62f1bd86d272f6bbccb098c5ff1bef3ff15ba6ec))
+* **deps:** bump word-wrap from 1.2.3 to 1.2.4 ([4c6e52f](https://github.com/rweich/streamdeck-ts-numberdisplay/commit/4c6e52f2ab7089b921822c543927005518daf2e8))
+
 ## [2.1.1](https://github.com/rweich/streamdeck-ts-numberdisplay/compare/v2.1.0...v2.1.1) (2023-02-05)
 
 
